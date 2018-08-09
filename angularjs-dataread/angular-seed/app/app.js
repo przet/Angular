@@ -1,3 +1,1 @@
-angular.module('F1FeederApp', [
-        'F1FeederApp.controllers'
-]);
+var app = angular.module('StaffInfoApp', []);

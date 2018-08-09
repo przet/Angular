@@ -2,26 +2,28 @@
 <html>
 <head>
   <title>My AngularJS App</title>
+
 </head>
 
-<body ng-app="F1FeederApp" ng-controller="driversController">
+<body ng-app="StaffInfoApp" ng-controller="staffController">
+  <ng-view></ng-view>
   <table>
     <thead>
-      <tr><th colspan="4">Drivers Championship Standings</th></tr>
+      <tr><th colspan="4">Staff Coffee Drinking Championship Standings</th></tr>
     </thead>
     <tbody>
-      <tr ng-repeat="driver in driversList">
+      <tr ng-repeat="staff in staffList">
         <td>{{$index+1}}</td>
-        <td>{{driver.Driver.givenName}}&nbsp;{{driver.Driver.familiyName}}</td>
-        <td>{{driver.discipline[0].name}}</td>
-        <td>{{driver.points}}</td>
+        <td>{{staff.Staff.givenName}}&nbsp;{{staff.Staff.familiyName}}</td>
+        <td>{{staff.discipline[0].name}}</td>
+        <td>{{staff.points}}</td>
       </tr>
     </tbody>
   </table>
   <script src="bower_components/angular/angular.js"</script>
-  <script src="bower_components/angular-route/angular-route.js"</script>
-  <script src="app.js"</script>
+  <!--  <script src="app.js"</script>
+  <script src="controllers.js"</script> -->
+  <script src="bower_components/angular-route/angular-route.js"</script> 
   <script src="services.js"</script>
-  <script src="controllers.js"</script>
 </body>
 </html>
